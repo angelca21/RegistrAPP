@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-icon   slot="primary" name="person-add-outline"></ion-icon>
+    <ion-title slot="start">RegistrAPP</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <icon-card>
+    <img src="assets/logo-duoc.png" class="ion-padding">
+  </icon-card>
+
+  <form #formu="ngForm" (ngSubmit)="onSubmit()">
+
+    <ion-list-header>
+      <ion-label></ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label position="stacked">User: </ion-label>
+      <ion-input type="text" placeholder="Nombre" name="user" minlength="3" [(ngModel)]="usuario.user" pattern="[a-zA-Z ]*"
+        required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Password: </ion-label>
+      <ion-input type="password" placeholder="Contraseña" name="password" value="" [(ngModel)]="usuario.password"
+        required>
+      </ion-input>
+    </ion-item>
+    <ion-button [disabled]="formu.invalid" expand="block" color="success" type="submit" fill="solid" routerLink="/inicio">
+      Iniciar Sesión
+    </ion-button>
+ 
+      <ion-button (click)="onClick()" expand="block" fill="clear" shape="round" routerLink="/reestpas">
+        Olvidaste Tu Pass?
+      </ion-button>
+ 
+
+
+    
+
+   
+
+  </form>
+  <br><br><br>
+
+  <ion-button expand="full" fill="outline" routerLink="/register">No tienes cuenta?</ion-button>
+
+
+
+
+</ion-content>

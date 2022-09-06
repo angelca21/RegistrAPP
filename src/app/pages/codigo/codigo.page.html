@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" ></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-title>Codigo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+  <ion-card>
+
+    <img src="assets/descarga QR GE.png" class="ion-padding">
+    <ion-item>
+      <ion-button (click)="onClick()" slot="start" expand="full" fill="outline" shape="round" routerLink="/listaasis">
+        asistencia de la clase
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

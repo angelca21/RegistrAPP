@@ -1,0 +1,21 @@
+ion-toolbar{
+    --ion-background-color:#b7c3a7
+}
+
+
+
+ion-content{
+    --ion-background-color:rgb(152, 175, 208);
+    ion-icon {
+        color: #438da4;
+        font-size: 64px;
+
+        padding-left: 30%;
+      
+        }
+    image-rendering: auto;
+    ion-item {
+        padding-left: 2%;
+    }
+}
+

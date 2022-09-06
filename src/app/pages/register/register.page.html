@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+  
+    <ion-list-header>
+      <ion-label></ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Nombre: </ion-label>
+      <ion-input type="text" placeholder="Nombre" minlength="3"
+                 name="nombre" [(ngModel)]= "usuario.nombre"
+                 pattern="[a-zA-Z ]*" required>
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Email: </ion-label>
+      <ion-input type="email" placeholder="Email"
+                 name="email" value=""  [(ngModel)]= "usuario.email"
+                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password: </ion-label>
+      <ion-input type="password"	 placeholder="Contraseña"
+                 name="password" value="" [(ngModel)]= "usuario.password"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    
+
+    <ion-button [disabled] ="formulario.invalid" fill="solid"
+            type="submit" expand="full" routerLink="/inciarse">
+      Registrarse
+    </ion-button>
+
+  </form>
+
+
+</ion-content>
